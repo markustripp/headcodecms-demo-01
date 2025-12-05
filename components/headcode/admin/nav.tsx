@@ -45,7 +45,7 @@ export function Nav({ role }: { role?: string }) {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild>
+          <NavigationMenuLink>
             <SignOutButton />
           </NavigationMenuLink>
         </NavigationMenuItem>
