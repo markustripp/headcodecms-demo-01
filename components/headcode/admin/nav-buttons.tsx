@@ -27,7 +27,6 @@ export function SignOutButton() {
 
   return (
     <>
-    <span>Sign Out:</span>
     <Button
       variant="ghost"
       size="icon"
