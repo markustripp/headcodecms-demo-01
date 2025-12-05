@@ -15,7 +15,9 @@ import { useRouter } from 'next/navigation'
 export function SignOutButton() {
   const router = useRouter()
 
-  const signOut = async () => {
+  const signOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
@@ -26,14 +28,9 @@ export function SignOutButton() {
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="cursor-pointer"
-      onClick={() => signOut()}
-    >
-      <LogOutIcon className="size-4" />
-    </Button>
+    <a href="#" onClick={signOut}>
+      <LogOutIcon className="size-4 ml-2" />
+    </a>
   )
 }
 
